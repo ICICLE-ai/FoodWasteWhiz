@@ -4,6 +4,11 @@
 This project provides an interactive chatbot interface to explore and build structured ontologies for food waste. It uses **Meta-Llama-3.1-8B-Instruct** with **Retrieval-Augmented Generation (RAG)** to answer questions based on uploaded PDFs. Users can provide feedback on the model’s answers, edit them, and store evaluations in a local SQLite database. You can also fine-tune the model using reinforcement learning (PPO) on the feedback.
 
 ---
+## **Acknowledgements**
+
+- National Science Foundation (NSF) funded AI institute for Intelligent Cyberinfrastructure with Computational Learning in the Environment (ICICLE) (OAC 2112606)
+
+---
 
 ## **Key Features**
 
