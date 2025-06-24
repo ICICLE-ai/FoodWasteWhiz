@@ -1,7 +1,9 @@
 # Food Waste Ontology Chatbot
 
-## **Overview**
+### **Overview**
 This project provides an interactive chatbot interface to explore and build structured ontologies for food waste. It uses **Meta-Llama-3.1-8B-Instruct** with **Retrieval-Augmented Generation (RAG)** to answer questions based on uploaded PDFs. Users can provide feedback on the model’s answers, edit them, and store evaluations in a local SQLite database. You can also fine-tune the model using reinforcement learning (PPO) on the feedback.
+
+**Tags**: Smart-Foodsheds
 
 ---
 ## **Acknowledgements**
@@ -10,19 +12,7 @@ This project provides an interactive chatbot interface to explore and build stru
 
 ---
 
-## **Key Features**
-
-- PDF-to-Text Extraction  
-- Embedding + Vector Database (ChromaDB + Sentence Transformers)  
-- RAG-based Q&A powered by HuggingFace Transformers  
-- Feedback system with editable responses and star rating  
-- SQLite backend for storing evaluations  
-- PPO-based fine-tuning using TRL for human feedback learning  
-- Streamlit frontend  
-
----
-
-## **Project Structure**
+#### **Project Structure**
 
 ```
 .
@@ -38,9 +28,9 @@ This project provides an interactive chatbot interface to explore and build stru
 
 ---
 
-## **Setup Instructions**
+## **How to Guide**
 
-### **1. Install Dependencies**
+#### **1. Install Dependencies**
 
 Use Python 3.10+. Install dependencies with:
 
@@ -61,7 +51,7 @@ langchain-chroma
 langchain_huggingface
 ```
 
-### **2. HuggingFace Token**
+#### **2. HuggingFace Token**
 
 Create a file called `hf_token.txt` in the root directory with your Hugging Face token:
 
@@ -71,13 +61,13 @@ your_huggingface_token_here
 
 ---
 
-### **3. Place PDF Files**
+#### **3. Place PDF Files**
 
 Put all input PDF files into the `./data/` directory.
 
 ---
 
-### **4. Run the App**
+#### **4. Run the App**
 
 Run the chatbot locally:
 
@@ -86,8 +76,18 @@ streamlit run main.py
 ```
 
 ---
+## **Explanation**
 
-## **Usage Flow**
+- PDF-to-Text Extraction  
+- Embedding + Vector Database (ChromaDB + Sentence Transformers)  
+- RAG-based Q&A powered by HuggingFace Transformers  
+- Feedback system with editable responses and star rating  
+- SQLite backend for storing evaluations  
+- PPO-based fine-tuning using TRL for human feedback learning  
+- Streamlit frontend  
+
+---
+### **Usage Flow**
 
 1. Select a predefined question or enter a custom one.
 2. The chatbot fetches relevant chunks from uploaded documents.
@@ -97,7 +97,7 @@ streamlit run main.py
 
 ---
 
-## **Reinforcement Learning with PPO (Optional)**
+### **Reinforcement Learning with PPO (Optional)**
 
 You can fine-tune the language model using PPO (Proximal Policy Optimization) with the human feedback stored in the database.
 
@@ -123,7 +123,7 @@ You can fine-tune the language model using PPO (Proximal Policy Optimization) wi
 
 ---
 
-## **Future Improvements**
+### **Future Improvements**
 
 - Authentication and user tracking
 - Cloud deployment
