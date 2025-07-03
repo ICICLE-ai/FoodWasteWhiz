@@ -49,6 +49,11 @@ torch
 trl
 langchain-chroma
 langchain_huggingface
+langchain_community
+bitsandbytes
+trl
+transformers
+llama_index
 ```
 
 #### **2. HuggingFace Token**
@@ -72,7 +77,7 @@ Put all input PDF files into the `./data/` directory.
 Run the chatbot locally:
 
 ```bash
-streamlit run main.py
+streamlit run app.py
 ```
 
 ---
