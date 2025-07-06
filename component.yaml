@@ -1,0 +1,15 @@
+- id: FoodWasteWhiz:0.1
+  name: FoodWasteWhiz
+  status: AlphaRelease
+  website: https://github.com/ICICLE-ai/FoodWasteWhiz
+  description: >
+    FoodWasteWhiz is a Streamlit-based chatbot for building and exploring food waste ontologies. It uses LLMs with Retrieval-Augmented Generation (RAG) to answer questions from uploaded PDFs 
+    and supports editable feedback stored in a local database.
+  owner: Karthik Jain
+  primaryThrust: core/Smart-Foodsheds
+  targetIcicleRelease: 2025-07
+  componentVersion: 1.0
+  sourceCodeUrl: https://github.com/ICICLE-ai/FoodWasteWhiz
+  licenseUrl: https://opensource.org/license/MIT
+  publicAccess: true
+  restrictedToRole: false
