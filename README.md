@@ -1,7 +1,7 @@
 # Food Waste Ontology Chatbot
 
 ### **Overview**
-This project provides an interactive chatbot interface to explore and build structured ontologies for food waste. It uses **Meta-Llama-3.1-8B-Instruct** with **Retrieval-Augmented Generation (RAG)** to answer questions based on uploaded PDFs. Users can provide feedback on the model’s answers, edit them, and store evaluations in a local SQLite database. You can also fine-tune the model using reinforcement learning (PPO) on the feedback.
+This project provides an interactive chatbot interface to explore and build structured ontologies for food waste. It uses **Meta-Llama-3.1-8B-Instruct** with **Retrieval-Augmented Generation (RAG)** to answer questions based on uploaded PDFs. Users can provide feedback on the model’s answers, edit them, and store evaluations in a local SQLite database.
 
 **Tags**: Smart-Foodsheds
 
@@ -22,7 +22,6 @@ This project provides an interactive chatbot interface to explore and build stru
 ├── feedback.db            # SQLite feedback database
 ├── hf_token.txt           # Your Hugging Face token
 ├── main.py                # Main Streamlit app
-├── train_rl.py            # PPO fine-tuning script
 └── README.md              # This file
 ```
 
@@ -46,12 +45,10 @@ sentence-transformers
 langchain
 transformers
 torch
-trl
 langchain-chroma
 langchain_huggingface
 langchain_community
 bitsandbytes
-trl
 transformers
 llama_index
 ```
@@ -88,7 +85,6 @@ streamlit run app.py
 - RAG-based Q&A powered by HuggingFace Transformers  
 - Feedback system with editable responses and star rating  
 - SQLite backend for storing evaluations  
-- PPO-based fine-tuning using TRL for human feedback learning  
 - Streamlit frontend  
 
 ---
@@ -102,38 +98,13 @@ streamlit run app.py
 
 ---
 
-### **Reinforcement Learning with PPO (Optional)**
-
-You can fine-tune the language model using PPO (Proximal Policy Optimization) with the human feedback stored in the database.
-
-### **Steps:**
-
-1. **Prepare Feedback Data:**
-   - Ensure `feedback.db` exists and has meaningful `question`, `edited_response`, and `score` entries.
-
-2. **Run the PPO Script:**
-   ```bash
-   python train_rl.py
-   ```
-
-3. **What It Does:**
-   - Loads data from `feedback.db`
-   - Initializes `Llama-3.1-8B-Instruct` with value head
-   - Computes a reward based on token overlap and score
-   - Applies PPO updates to align the model closer to human-edited responses
-   - Saves the fine-tuned model in `./rl_model/`
-
-4. **Next Steps:**
-   - Replace the original model in `main.py` with your fine-tuned version if desired.
-
----
-
 ### **Future Improvements**
 
 - Authentication and user tracking
 - Cloud deployment
 - Analytics dashboard for feedback insights
 - More advanced reward modeling (embedding similarity, BLEU, etc.)
+- Reinforcement Learning with PPO for enhanced knowledge
 
 ---
 
