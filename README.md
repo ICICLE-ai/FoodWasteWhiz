@@ -37,22 +37,6 @@ Use Python 3.10+. Install dependencies with:
 pip install -r requirements.txt
 ```
 
-Make sure `requirements.txt` includes:
-```txt
-streamlit
-pdfplumber
-sentence-transformers
-langchain
-transformers
-torch
-langchain-chroma
-langchain_huggingface
-langchain_community
-bitsandbytes
-transformers
-llama_index
-```
-
 #### **2. HuggingFace Token**
 
 Create a file called `hf_token.txt` in the root directory with your Hugging Face token:
