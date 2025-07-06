@@ -87,8 +87,7 @@ streamlit run app.py
 - Authentication and user tracking
 - Cloud deployment
 - Analytics dashboard for feedback insights
-- More advanced reward modeling (embedding similarity, BLEU, etc.)
-- Reinforcement Learning with PPO for enhanced knowledge
+- Reinforcement Learning with PPO and advanced reward modeling (embedding similarity, BLEU, etc.) for enhanced knowledge
 
 ---
 
